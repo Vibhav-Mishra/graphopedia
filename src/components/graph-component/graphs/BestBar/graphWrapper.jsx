@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { actualOneD } from "../utils/mockData";
 import ResizeHandlerHOC from "../utils/resizeHandlerHOC";
 import BestBarGraph from "./bestBar.graph";
-import { GraphContainer, GraphWrp } from "../../styles/index.sc";
+import { GraphContainer, GraphWrp } from "../../Styles/index.sc";
 
 const BestBar = (props) => {
   const refElement = useRef(null);

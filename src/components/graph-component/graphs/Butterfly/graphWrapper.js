@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { GraphContainer, GraphWrp } from '../../styles/index.sc';
+import { GraphContainer, GraphWrp } from '../../Styles/index.sc';
 import { actualOneD } from '../utils/mockData';
 import ResizeHandlerHOC from '../utils/resizeHandlerHOC';
 import ButterflyGraph from './butterfly.graph';

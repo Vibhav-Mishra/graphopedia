@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import CoolColumn from "../../graphs/CoolColumn/graphWrapper.jsx";
 import GraphLegends from "../legends/index.jsx";
-import * as Styles from "./index.sc.js";
+// import * as Styles from "./index.sc.js";
+import * as Styles from "./index.sc.js"
 import PropTypes from "prop-types";
 import PortalTooltip from "../portal-tooltip/index.jsx";
 import GraphTooltip from "../graph-tooltip/index.jsx";
-import ExapandablePods from "@rmzlib/expandable-pods";
+// import ExpandablePods from "@rmzlib/expandable-pods";
 
 const ColumnGraph = ({
   data,
@@ -345,19 +346,15 @@ const ColumnGraph = ({
   return (
     <>
       {expandable ? (
-        <ExapandablePods
-          onExpand={(e) => {
-            setExpanded(true);
-          }}
-          onShrink={(e) => {
-            setExpanded(false);
-          }}
-          title={chartTitle ? chartTitle : data?.title}
-          content={renderGraphWrap(expandable)}
-        />
-      ) : (
-        renderGraphWrap(false)
-      )}
+  <div>
+    <button onClick={() => setExpanded(true)}>Expand</button>
+    {expanded && renderGraphWrap(expandable)}
+    <button onClick={() => setExpanded(false)}>Shrink</button>
+  </div>
+) : (
+  renderGraphWrap(false)
+)}
+
     </>
   );
 };
